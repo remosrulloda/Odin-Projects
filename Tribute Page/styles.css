@@ -1,0 +1,51 @@
+html {
+    font-family: system-ui;
+    background-color: #EEEEEE;
+    text-align: center;
+}
+
+#title {
+    color: #333333;
+}
+
+.header {
+    padding: 48px 0px 0px 0px;
+}
+
+
+#tribute-info {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 2;
+}
+
+#image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#img-div {
+    background-color: white;
+    padding: 24px 20px 10px 20px;
+}
+
+.quote {
+    padding: 12px 4px 12px 4px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.message {
+    font-size: 12px;
+    margin: 0 auto;
+}
+
+#title3 {
+    text-align: center;
+    padding: 36px 2px 36px 2px;
+}
