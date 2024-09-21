@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <form action="address-input" id='address-input' novalidate>
+
+        <div class="address-input">
+            <label for="email">Email </label>
+            <input type="email" name="email" required minlength="8" id="email">
+            <span class="error" aria-live="polite"></span>
+        </div>
+
+        <div class="address-input">
+            <label for="country">Country </label>
+            <input type="text" name="country" id="country">
+        </div>
+
+        <div class="address-input">
+            <label for="zipcode">Zip </label>
+            <input type="text" name="zipcode" maxlength="5" id="zipcode">
+        </div>
+
+        <div class="address-input">
+            <label for="password">Password </label>
+            <input type="password" name="password" id="password">
+        </div>
+
+        <div class="address-input">
+            <input type="submit" value="Submit!" id="submit">
+        </div>
+    </form>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
