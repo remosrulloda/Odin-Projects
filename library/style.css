@@ -1,0 +1,115 @@
+:root {
+    --off-white: #F0F0F0;
+    --accent: #366251;
+    --background: #C6BEB0;
+    --title: #575555;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather', serif;
+}
+
+.header {
+    padding: 50px;
+    background-color: var(--accent);
+    color: var(--off-white);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+body {
+    background-color: var(--background);
+}
+
+.content {
+    margin: 70px 50px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 1.10rem;
+}
+
+h3 {
+    font-size: 1.0rem;
+}
+
+h4 {
+    font-size: 0.95rem;
+}
+
+.card {
+    padding: 25px;
+    background-color: var(--off-white);
+    width: 250px;
+    height: 150px;
+    border-radius: 20px;
+    line-height: 1.5;
+}
+
+
+footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+}
+
+@media(min-height: 100vh) {
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 10px;
+    }
+}
+
+.books {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 40px;
+}
+
+@media(max-width: 360px) {
+    .books {
+        gap: 50px;
+    }
+}
+
+.input-values,
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.addBook {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    padding: 30px 0;
+    justify-content: center;
+}
+
+#addBookBtn:hover {
+    cursor: pointer;
+}
+
+.readDiv {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.removeDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
