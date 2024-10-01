@@ -1,0 +1,108 @@
+:root {
+    --Background-color: hsl(197, 7%, 21%);
+    --Button-color: hsl(163, 18%, 50%);
+    --Button-clicked: hsl(164, 18%, 37%);
+    --Reset-button: hsl(357, 67%, 40%);
+    --Reset-button-hover: hsl(357, 100%, 32%);
+}
+
+html {
+    font-family: "Helvetica", sans-serif;
+    user-select: none;
+}
+
+body {
+    background-color: var(--Background-color);
+    min-height: 100vh;
+    display: flex;
+    font-size: 18px;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    font-size: 45px;
+}
+
+.result-message {
+    text-align: center;
+    font-size: 25px;
+}
+
+.computer-choice {
+    text-align: center;
+    font-size: 28px;
+}
+
+.score-labels {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.score-section {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    align-items: center;
+    gap: 15px;
+    height: 150px;
+}
+
+.results {
+    min-height: 90px;
+}
+
+.choice {
+    background-color: var(--button);
+}
+
+.choices {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.btn {
+    background-color: var(--Button-color);
+    padding: 30px;
+    border-radius: 50%;
+    border: solid white 5px;
+}
+
+.btn:active {
+    background-color: var(--Button-clicked);
+}
+
+.footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+}
+
+.content {
+    min-width: 750px;
+}
+
+.reset-btn {
+    background: var(--Reset-button);
+    color: white;
+    padding: 20px;
+    font-size: 1.5rem;
+    border-radius: 25px;
+    border: none;
+}
+
+.reset-btn:hover {
+    background: var(--Reset-button-hover);
+}
+
+.reset-btn:active {
+    background-color: var(--Reset-button-hover);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}

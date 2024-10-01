@@ -1,0 +1,239 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+.logo {
+    font-size: 30px;
+    color: #F9FAF8;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+@media(orientation:portrait) {
+    p {
+        font-size: 20px;
+    }
+
+    h1,
+    h2 {
+        font-size: 40px;
+        color: white;
+    }
+
+    .margin {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .hero-section {
+        padding-top: 20px;
+    }
+
+    .hero-content {
+        padding-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .hero-content img {
+        height: 500px;
+        object-fit: cover;
+    }
+
+    .info-box img {
+        width: 400px;
+        height: 600px;
+    }
+
+    .character-text p {
+        font-size: 18px;
+    }
+
+    .character-section img {
+        height: 600px;
+        max-width: 500px;
+    }
+
+    .character-text {
+        max-width: 550px;
+        padding: 10px;
+    }
+
+    .info-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+
+@media(orientation:landscape) {
+    p {
+        font-size: 20px;
+    }
+
+    h1,
+    h2 {
+        font-size: 40px;
+        color: white;
+    }
+
+    .margin {
+        margin-left: 300px;
+        margin-right: 300px;
+    }
+
+    .hero-section {
+        padding-top: 20px;
+    }
+
+    .hero-content {
+        padding-bottom: 50px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .hero-content img {
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .info-box img {
+        width: 200px;
+        height: 300px;
+    }
+
+    .character-text p {
+        font-size: 18px;
+    }
+
+    .character-section img {
+        height: 600px;
+        max-width: 500px;
+    }
+
+    .character-text {
+        max-width: 550px;
+        padding: 10px;
+    }
+
+    .info-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.hero-section {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)) no-repeat fixed,
+        url(images/header-background.jpeg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.info-content h2 {
+    text-align: center;
+    color: #1F2937;
+    font-weight: 800;
+}
+
+.info-images {
+    margin: 20px 0 20px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+}
+
+.info-box {
+    text-align: center;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+}
+
+.info-box:hover {
+    transform: scale(1.1);
+}
+
+.info-box img {
+    border: 3px solid #3882F6;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.character-section {
+    position: relative;
+}
+
+.character-section img {
+    align-self: center;
+}
+
+.character-text {
+    color: white;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 10px;
+}
+
+.background-blur {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(7px);
+}
+
+#dick-section {
+    background-image: url('/images/bg/bludhaven.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+#jason-section {
+    background-image: url('/images/bg/jason.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+#tim-section {
+    background-image: url('/images/bg/tim.png');
+    background-position: center;
+    background-size: cover;
+}
+
+#damian-section {
+    background-image: url('/images/bg/damian.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+footer {
+    padding-top: 20px;
+    height: 100px;
+    background: #1F2937;
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
