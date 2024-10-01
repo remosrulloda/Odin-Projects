@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --accent-color: #E55812;
+}
+
+#content {
+    margin: 0 350px 0 350px; 
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.toggled {
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color);
+    text-decoration-thickness: 4px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    margin-top: 1em;
+    margin-bottom: 7em;
+}
+
+nav > button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color);
+    text-decoration-thickness: 4px;
+}
+
+.page-content {
+    text-align: center;
+    display: flex;
+    gap: 70px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.second-div {
+    width: 500px;
+}
+
+.second-div p {
+    text-align: justify;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 10px;
+    font-family: 'Tinos', serif;
+    font-weight:600;
+    display: inline;
+    margin: 0 300px 0 150px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-family: 'Tinos', sans-serif;
+    font-weight: 400;
+}
+
+p {
+    font-size: 1.75rem;
+    margin: 0px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+button {
+    all: unset;
+    
+}
+
+.about p {
+    font-size: 20px;
+}
+
+.inner-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.text {
+    text-align: justify;
+    width: 700px;
+}
