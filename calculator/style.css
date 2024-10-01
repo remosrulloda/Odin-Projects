@@ -1,0 +1,108 @@
+:root {
+    --main-bg-color: #1a181b;
+    --main-button-color: #564D65;
+    --main-button-clicked: #3e3848;
+    --main-result-color: #3e8989;
+    --background-color: #587291;
+    --red: #CA3C25;
+    --red-clicked: #a02a17;
+}
+
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+}
+
+.display {
+    background-color: var(--main-result-color);
+    height: 110px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.current,
+.previous {
+    font-size: 1.25rem;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 10px;
+}
+
+.current {
+    font-size: 2rem;
+    height: fit-content;
+}
+
+.container-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container-child {
+    max-width: 300px;
+    width: 100%;
+}
+
+.calculator {
+    background-color: var(--main-bg-color);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.calculator .all-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 100%;
+    grid-gap: .5rem;
+    padding: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.all-buttons button {
+    background-color: var(--main-button-color);
+    color: white;
+    font-size: 1.325rem;
+    padding: 1rem 0;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px #666666;
+    user-select: none;
+}
+
+button.equals {
+    grid-column: 3 / 5;
+    border-radius: 1rem;
+}
+
+button.allclear,
+button.clear {
+    background-color: var(--red);
+}
+
+footer {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 500;
+    color: white;
+}
+
+button:hover {
+    background-color: var(--main-button-clicked);
+    cursor: pointer;
+}
+
+button:active {
+    background-color: var(--main-button-clicked);
+    box-shadow: 0px 3px #666;
+}
+
+.allclear:hover,
+.clear:hover {
+    background-color: var(--red-clicked);
+}
