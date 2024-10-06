@@ -1,8 +1,6 @@
-import PersonalInfo from 'PersonalInfo.jsx';
-import Education from 'Education.jsx';
-import Experience from 'Experience.jsx';
-import './App.css'
-
+import PersonalInfo from './PersonalInfo.jsx';
+import Education from './Education.jsx';
+import Experience from './Experience.jsx';
 
 function App() {
   return (

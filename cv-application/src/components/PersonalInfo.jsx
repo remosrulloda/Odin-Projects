@@ -1,5 +1,3 @@
-import '/styles/App.css'
-
 function PersonalInfo() {
   return (
     <div className='genInfo'>

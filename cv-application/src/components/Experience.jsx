@@ -1,4 +1,4 @@
-import Calendar from 'Calendar.jsx';
+import Calendar from './Calendar.jsx';
 
 function Experience() {
     return (
