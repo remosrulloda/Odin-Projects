@@ -1,0 +1,23 @@
+.infoBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-columns: 1fr 2fr 2fr;
+}
+
+.left {
+    grid-column: 1;
+}
+
+.right {
+    grid-column: 2 / 4;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
