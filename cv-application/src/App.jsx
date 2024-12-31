@@ -227,14 +227,14 @@ function Experience({ handleChange, data }) {
         onChange={(date) => setExperienceInput({ ...experienceInput, endDate: date })}
       />
       <button onClick={addExperience}>Add New Experience</button>
-      {data.experience.map((entry, index) => {
+      {data.experience.map((entry, index) => (
         <EditExperience
           key={index}
           entry={entry}
           onUpdate={(updatedEntry) => updateExperience(index, updatedEntry)}
           onDelete={() => deleteExperience(index)}
         />
-      })}
+      ))}
     </div>
   )
 }
@@ -275,7 +275,6 @@ function EditExperience({ entry, onUpdate, onDelete }) {
             onChange={(date) => setEditedEntry({ ...editedEntry, endDate: date })}
           />
           <button onClick={handleUpdate}>Save</button>
-          <button onClick={() => setIsEditing(false)}>Cancel</button>
         </>
       ) : (
         <>

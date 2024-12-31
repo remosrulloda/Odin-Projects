@@ -6,17 +6,18 @@
 }
 
 .layout {
-    display: grid;
-    grid-template-columns: 3;
-    grid-template-columns: 1fr 2fr 2fr;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
 .left {
-    grid-column: 1;
+    width: 50%;
+    padding: 10px;
 }
 
 .right {
-    grid-column: 2 / 4;
+    padding: 10px;
     display: flex;
     justify-content: center;
     flex-direction: column;
