@@ -22,13 +22,7 @@ function App() {
     async function fetchPokemon() {
       try {
         const data = await getData();
-        if (Array.isArray(data)) {
-          setPokemon(data.slice(0, 12));
-          console.log(data);
-        } else {
-          console.error("Fetched data is not an array:", data);
-          setPokemon([]);
-        }
+        setPokemon(data.slice(0, 10));
       } catch (error) {
         console.error("Error fetching Pokémon:", error);
       }
@@ -37,15 +31,15 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div className="card">
       {pokemon.length > 0 ? (
-        pokemon.map((poke, index) => (
-          <Card key={index} data={poke} />
+        pokemon.map((mon, index) => (
+          <Card key={index} data={mon} />
         ))
       ) : (
         <p>Loading...</p>
       )}
-    </>
+    </div>
   );
 }
 
