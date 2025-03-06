@@ -2,10 +2,15 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import getData from './Api'
 
-function Card({ data }) {
+function Card({ data, index }) {
+  if (!data) {
+    return <p>Loading...</p>;
+  }
+
   return (
     <div id="card">
-      {data.length > 0 ? <h2>{data[0].name}</h2> : <p>Loading...</p>}
+      <img src={data.sprites.front_default} alt={data.name} />
+      <h2>{data.name}</h2>
     </div>
   );
 }
@@ -15,17 +20,33 @@ function App() {
 
   useEffect(() => {
     async function fetchPokemon() {
-      const data = await getData();
-      if (data) setPokemon(data);
+      try {
+        const data = await getData();
+        if (Array.isArray(data)) {
+          setPokemon(data.slice(0, 12));
+          console.log(data);
+        } else {
+          console.error("Fetched data is not an array:", data);
+          setPokemon([]);
+        }
+      } catch (error) {
+        console.error("Error fetching Pokémon:", error);
+      }
     }
     fetchPokemon();
   }, []);
 
   return (
     <>
-      <Card data={pokemon} />
+      {pokemon.length > 0 ? (
+        pokemon.map((poke, index) => (
+          <Card key={index} data={poke} />
+        ))
+      ) : (
+        <p>Loading...</p>
+      )}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
