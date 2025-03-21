@@ -11,7 +11,7 @@ export default async function getData() {
 
         const pokemon = [];
 
-        for (let i = 0; i < 12; i++) {
+        for (let i = 0; i < 20; i++) {
             const pokemonUrl = json.results[i].url;
             const pokemonResponse = await fetch(pokemonUrl);
             if (!pokemonResponse.ok) {
