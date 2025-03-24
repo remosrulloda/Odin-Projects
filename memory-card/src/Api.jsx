@@ -25,6 +25,7 @@ export default async function getData() {
 
     } catch (error) {
         console.error(error.message);
+        return [];
     }
 }
 
