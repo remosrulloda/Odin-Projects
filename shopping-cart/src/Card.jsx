@@ -1,16 +1,17 @@
 import { useState } from "react";
+import { useCart } from "./CartContext";
 
 const Card = ({ product }) => {
+    const { addToCart } = useCart(); // Get addToCart from context
     const [quantity, setQuantity] = useState(1);
 
     const handleAddToCart = () => {
+        addToCart({ ...product, quantity });
+        setQuantity(1);
         console.log(`Adding ${quantity} of ${product.title} to cart`);
-
-        // TODO: Add logic
     };
 
     const handleQuantityChange = (e) => {
-
         const value = e.target.value;
 
         if (value === "") {

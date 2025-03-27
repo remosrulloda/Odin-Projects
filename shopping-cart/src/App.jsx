@@ -1,23 +1,10 @@
-import { useState } from 'react'
-import { Link, Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom'
-import './styles/App.css'
+import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { CartProvider } from './CartContext'
+import NavBar from './NavBar'
 import Home from './Home'
 import Shop from './Shop'
 import Cart from './Cart';
-
-function NavBar() {
-  return (
-    <nav>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-          <Link to="/shop">Shop</Link>
-          <Link to="/cart">Cart</Link>
-        </li>
-      </ul>
-    </nav>
-  )
-};
+import './styles/App.css'
 
 function Layout() {
   return (
@@ -42,9 +29,9 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <>
+    <CartProvider>
       <RouterProvider router={router} />
-    </>
+    </CartProvider>
   )
 }
 
