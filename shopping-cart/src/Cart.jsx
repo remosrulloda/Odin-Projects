@@ -20,6 +20,7 @@ export default function Cart() {
                     </>
                 )
             }
+            <button>Checkout</button>
         </div>
     );
 };

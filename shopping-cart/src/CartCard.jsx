@@ -1,6 +1,8 @@
 import { useCart } from "./CartContext";
+import { useState } from "react";
 
 const CartCard = ({ product }) => {
+    const [confirmRemove, setConfirmRemove] = useState(false);
     const { updateQuantity, removeFromCart } = useCart();
 
     const handleQuantityChange = (e) => {
@@ -14,6 +16,15 @@ const CartCard = ({ product }) => {
             updateQuantity(product.id, newQuantity);
         }
     };
+
+    const handleConfirmRemove = () => {
+        if (confirmRemove) {
+            removeFromCart(product, true);
+        } else {
+            setConfirmRemove(true);
+            setTimeout(() => setConfirmRemove(false), 3000);
+        }
+    }
 
     return (
         <div className="cart-card-container bg-white p-4 rounded-lg shadow-md flex-row">
@@ -30,7 +41,10 @@ const CartCard = ({ product }) => {
                 onChange={handleQuantityChange}
                 className="numInput border border-gray-300 rounded-lg p-2 w-20 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-            <button onClick={() => removeFromCart(product)}>Remove</button>
+            <button onClick={handleConfirmRemove}
+                className="mt-2 px-4 py-2 rounded-lg">
+                {confirmRemove ? "Remove Items?" : "Remove"}
+            </button>
         </div>
     )
 }
