@@ -11,7 +11,7 @@ const Card = ({ product }) => {
         setQuantity(quantity);
         console.log(`Adding ${quantity} of ${product.title} to cart`);
         setIsClicked(true);
-
+        console.log(isClicked);
         setTimeout(() => {
             setIsClicked(false);
         }, 1000);
@@ -46,10 +46,10 @@ const Card = ({ product }) => {
                     className="numInput border border-gray-400 rounded-lg p-2 w-16 text-center focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 <button onClick={handleAddToCart}
-                    className={`py-2 px-4 rounded-lg text-semibold 
+                    className={`addToCartBtn py-2 px-4 rounded-lg text-semibold 
                         ${isClicked
-                            ? "bg-green-500 text-white cursor-not-allowed"
-                            : "bg-blue-500 hover:bg-blue-600"
+                            ? "bg-green-500 text-black cursor-not-allowed"
+                            : "bg-blue-500 hover:bg-blue-600 text-black"
                         }`}
                     disabled={isClicked}
                 >

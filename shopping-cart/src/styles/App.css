@@ -1,2 +1,9 @@
 @import "tailwindcss";
 
+
+.bg-store {
+    background-image: url('/store.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
