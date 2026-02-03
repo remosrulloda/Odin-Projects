@@ -1,0 +1,25 @@
+<html lang="en">
+
+<head>
+    <title>
+        Mini Messageboard
+    </title>
+</head>
+<!-- res.render ‘locals’ object (e.g. res.render("index", { title: "Mini Messageboard", messages: messages })). -->
+
+
+<body>
+    <% for (let i=0; i < messages.length; i++) {%>
+        <div>
+            <p>
+                <%=messages[i].text%> - <%=messages[i].user%>
+                        <span style="color: blue">
+                            <%=messages[i].added%>
+                        </span>
+            </p>
+        </div>
+        <% }%>
+            <a href="/new">post!</a>
+</body>
+
+</html>

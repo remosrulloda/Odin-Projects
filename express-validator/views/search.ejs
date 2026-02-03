@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+
+<body>
+    <ul>
+        <% if (locals.users) {%>
+            <% users.forEach(user=> { %>
+                <li>
+                    ID: <%= user.id %>, Name: <%= user.firstName %>
+                            <%= user.lastName %>
+                                <%= user.email %>
+                                    <%= user.age %>
+                                        <%= user.bio %>
+                </li>
+                <% }); %>
+                    <% } %>
+    </ul>
+</body>
+
+</html>
